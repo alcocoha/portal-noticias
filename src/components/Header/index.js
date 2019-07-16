@@ -1,16 +1,16 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-const Header = props => {
+const Header = ({title}) => {
     return (
-        <Fragment>
-            <h1>{props.title}</h1>
-        </Fragment>
+        <nav className="nav-wrapper light-blue darken-3">
+            <div className="brand-logo center">{title}</div>
+        </nav>
     );
 };
 
 Header.propTypes = {
-    title : PropTypes.array.isRequired
+    title : PropTypes.string.isRequired
 };
 
 export default Header;
